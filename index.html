@@ -3,16 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TA City validation</title>
+  <title>TA City validation webmaps</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .highlight-note-yellow {
+      border-left: 4px solid #d4a000;
+      background-color: #f7f2d6;
+      padding: 0.75rem 2.2rem;
+      margin: 0.5rem 0 2rem;
+      display: block;
+    }
+
+    .highlight-note-blue {
+      border-left: 4px solid #2d5fa1;
+      background-color: #def7ff;
+      padding: 0.75rem 2.2rem;
+      margin: 0.5rem 0 2rem;
+      display: block;
+    }
+
+    .highlight-note-pink {
+      border-left: 4px solid #ffc0cb;
+      background-color: #fff0f5;
+      padding: 0.75rem 2.2rem;
+      margin: 0.5rem 0 2rem;
+      display: block;
+    }
+
+    .highlight-note-yellow a,
+    .highlight-note-blue a,
+    .highlight-note-pink a {
+      color: #1a1a1a;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
   <main>
     <h1>TA City validation</h1>
+
+    <section>
+      <h3>Description</h3>
+      <p>This page hosts the maps for the validation of the <a href="https://github.com/alexandrepereiraarq/TI-City-Model">TA City Model</a>. TA City is an agent-based model simulating population allocation at the metropolitan scale following scenarios (e.g., those from the <a href="https://en.wikipedia.org/wiki/Shared_Socioeconomic_Pathways">SSP framework</a>). It is an extension of the <a href="https://github.com/skfagyemang/TI-City-Model">TI City Model</a> by Felix Agyemang.</p>
+
+      <h3>Usage</h3>
+      <p>We recommend you to click on the links below and evaluate <b>each map set at a time</b>.</p>
+        <p>In each map set, you can use the <b>layer control</b> to switch the maps between three scenarios (<b><i>S1 business-as-usual, S2 sustainable development, or S3 increased fragmentation)</b></i>. These scenarios come from a scenario matrix, that we present below. The scenarios themselves are not being evaluated today, think of them as assumptions. We could like to assess if the model we produced can represent theses cenarios correctly, according to your expertise.</p>
+        <p>The <b>legend</b> explains the the meaning of the colors. You can also use the <b>zoom and pan tools</b> to explore the maps in more detail.</p>
+      <p>Our scenarios are built around the following scenario matrix:</p>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+            <th>Scenario</th>
+            <th>Population growth</th>
+            <th>Socioeconomic distribution</th>
+            <th>Planning effectiveness</th>
+            <th>Exposure</th>
+            </tr>
+            <tr>
+            <td>1. Business-as-Usual</td>
+            <td>Moderate</td>
+            <td>Remains similar to current</td>
+            <td>Somewhat effective</td>
+            <td>High at the coast</td>
+            </tr>
+            <tr>
+            <td>2. Sustainable Development</td>
+            <td>Strong</td>
+            <td>High and mid classes increase</td>
+            <td>Effective</td>
+            <td>Low overall</td>
+            </tr>
+            <tr>
+            <td>3. Fragmentation and competition</td>
+            <td>Low</td>
+            <td>Low & deprived SEPs increase</td>
+            <td>Somewhat effective</td>
+            <td>High overall</td>
+            </tr>
+        </table>
+        <p>When you are ready, please proceed to each evaluation part below. Please make notes to answer the questions we provide. As a support, the maps contain information about four quadrants, to help you locate your answers more precisely.</p><br>
+    </section>
+    <section>
+    <div class="highlight-note-yellow"><h2>Part 1: Error Detection, i.e., <i>Can this exist?</i></h2></div>
+    <p>Please look at each scenario at a time, as if you were reviewing a plan.</p>
     <ul>
-      <li><a href="reports/validation_webmaps/qgis2web_2026_10_07-18_03_33_640204/index.html">Scenario 1: Business-as-Usual</a></li>
-      <li><a href="reports/validation_webmaps/qgis2web_2026_10_07-18_08_12_526823/index.html">Scenario 2: Sustainable Development</a></li>
-      <li><a href="reports/validation_webmaps/qgis2web_2026_10_07-18_10_13_148824/index.html">Scenario 3: Fragmentation and competition</a></li>
+      <li>Is there any area where you know urban development cannot happen — but the model shows it?</li>
+      <li>Are there areas missing from this map that you'd expect to be built-up already?</li>
+      <li>Do you know of any regulation, land status, or informal barrier that makes this impossible?</li>
     </ul>
+    <div class="highlight-note-yellow">
+      <a href="reports/validation_webmaps/qgis2web_validation_part1/index.html" target="_blank" rel="noopener noreferrer">Map 1: error detection</a>
+    </div>
+    </section>
+    <section>
+    <div class="highlight-note-blue"><h2>Part 2: Location & Urban Morphology, i.e., <i>Does this look like Jakarta?</i></h2></div>
+    <p>Now, let's look at the maps with a bit more detail.</p>
+    <ul>
+      <li>Looking only at the new development (the red areas), which parts of the growth pattern match what you'd expect for Jakarta under this scenario — and which don’t?</li>
+      <li>Zooming into each quadrant: is the new development form here plausible? Too dispersed? Too clustered? Where would it actually concentrate?</li>
+      <li>Do environmental features (rivers, wetlands, slopes) create the right 'resistance' to growth? Where does the model jump over a barrier that would in reality stop development?</li>
+      <li>If I showed you these maps unlabeled, would you recognize them as Jakarta? What would give it away — or what's missing?</li>
+    </ul>
+    <div class="highlight-note-blue">
+      <a href="reports/validation_webmaps/qgis2web_validation_part2/index.html" target="_blank" rel="noopener noreferrer">Map 2: location & morphology</a>
+    </div>
+    </section>
+    </section>
+        <section>
+    <div class="highlight-note-pink"><h2>Part 3: Socioeconomic profiles, i.e., <i>Can the socioeconomic classes in Jakarta be distributed like this?</i></h2></div>
+    <p>In this segment, we want to assess the potential distribution of social classes in the future urban development in Jakarta. The “High” socioeconomic profile represents the wealthier segments of society, while the “Low” those with lower economic means. In our model, the results show the prevalent class for each area.</p>
+    <ul>
+      <li>Looking at the spatial distribution for each socioeconomic class, which areas do not match your expectations for future development? Please point to specific regions.</li>
+      <li>Are there any areas where different SEPs should not mix (e.g., high near low)?</li>
+    </ul>
+    <div class="highlight-note-pink">
+      <a href="reports/validation_webmaps/qgis2web_validation_part3/index.html" target="_blank" rel="noopener noreferrer">Map 3: socioeconomic profiles</a>
+    </div>
+    </section>
+    <section>
+        <h2>Thank you!</h2>
+        <p>Thank you for participating in this scenario evaluation.</p>
+        <p>If you have any other comments or questions, reach out to our team: <a href="mailto:asantos@uni-bonn.de">asantos(at)uni-bonn.de</a></p>
+        <h3>References:</h3>
+        <p>
+            <ul>
+                <li>Agyemang, Felix S. K., Elisabete Silva, and Sean Fox. Modelling and Simulating “Informal Urbanization”: An Integrated Agent-Based and Cellular Automata Model of Urban Residential Growth in Ghana. Environment and Planning B: Urban Analytics and City Science 50, no. 4 (2023): 863-77. <a href="https://doi.org/10.1177/23998083211068843">https://doi.org/10.1177/23998083211068843</a></li>
+                <li>Santos, Alexandre Pereira, Jan Petzold, Gusti Ayu Ketut Surtiari, Charlotta Mirbach, and Matthias Garschagen. Incorporating Path Dependency into Downscaled SSP Narratives: Lessons from Jakarta. Environmental Research Letters 21, no. 5 (2026): 054006. <a href="https://doi.org/10.1088/1748-9326/ae46b1">https://doi.org/10.1088/1748-9326/ae46b1</a></li>
+            </ul>
+        </p>
+    </section>
   </main>
 </body>
 </html>
