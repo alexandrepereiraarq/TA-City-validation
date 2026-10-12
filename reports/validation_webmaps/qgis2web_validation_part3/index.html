@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="css/L.Control.Layers.Tree.css">
         <link rel="stylesheet" href="css/qgis2web.css">
         <link rel="stylesheet" href="css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/maplibre-gl.css">
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
@@ -38,11 +37,10 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet.photon.js"></script>
         <script src="js/leaflet-measure.js"></script>
-        <script src="js/maplibre-gl.js"></script>
-        <script src="js/leaflet-maplibre-gl.js"></script>
-        <script src="data/Subquadrantsgrid_6.js"></script>
-        <script src="data/Quadrantsgrid_7.js"></script>
-        <script src="data/MunicipalitiesinJABODETABEK_8.js"></script>
+        <script src="data/Subquadrantsgrid_5.js"></script>
+        <script src="data/Quadrantsgrid_6.js"></script>
+        <script src="data/MunicipalitiesinJABODETABEK_7.js"></script>
+        <script src="data/RoadnetworkOSM_8.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:12, minZoom:10
@@ -176,37 +174,32 @@
         });
         layer_ESRITopo_1;
         map.addLayer(layer_ESRITopo_1);
-        map.createPane('pane_OpenFreeMap_2');
-        map.getPane('pane_OpenFreeMap_2').style.zIndex = 402;
-        var layer_OpenFreeMap_2 = new L.maplibreGL({
-            style: 'https://tiles.openfreemap.org/styles/liberty',
-        });
-        map.createPane('pane_S3IncreasedFragmentation_3');
-        map.getPane('pane_S3IncreasedFragmentation_3').style.zIndex = 403;
-        var img_S3IncreasedFragmentation_3 = 'data/S3IncreasedFragmentation_3.png';
-        var img_bounds_S3IncreasedFragmentation_3 = [[-6.792581042548818,106.25559955967395],[-5.866767292095835,107.30527432851883]];
-        var layer_S3IncreasedFragmentation_3 = new L.imageOverlay(img_S3IncreasedFragmentation_3,
-                                              img_bounds_S3IncreasedFragmentation_3,
-                                              {pane: 'pane_S3IncreasedFragmentation_3'});
-        bounds_group.addLayer(layer_S3IncreasedFragmentation_3);
-        map.createPane('pane_S2SustainableDevelopment_4');
-        map.getPane('pane_S2SustainableDevelopment_4').style.zIndex = 404;
-        var img_S2SustainableDevelopment_4 = 'data/S2SustainableDevelopment_4.png';
-        var img_bounds_S2SustainableDevelopment_4 = [[-6.792581042548818,106.25559955967395],[-5.866767292095835,107.30527432851883]];
-        var layer_S2SustainableDevelopment_4 = new L.imageOverlay(img_S2SustainableDevelopment_4,
-                                              img_bounds_S2SustainableDevelopment_4,
-                                              {pane: 'pane_S2SustainableDevelopment_4'});
-        bounds_group.addLayer(layer_S2SustainableDevelopment_4);
-        map.createPane('pane_S1BusinessasUsual_5');
-        map.getPane('pane_S1BusinessasUsual_5').style.zIndex = 405;
-        var img_S1BusinessasUsual_5 = 'data/S1BusinessasUsual_5.png';
-        var img_bounds_S1BusinessasUsual_5 = [[-6.792581042548818,106.25559955967395],[-5.866767292095835,107.30527432851883]];
-        var layer_S1BusinessasUsual_5 = new L.imageOverlay(img_S1BusinessasUsual_5,
-                                              img_bounds_S1BusinessasUsual_5,
-                                              {pane: 'pane_S1BusinessasUsual_5'});
-        bounds_group.addLayer(layer_S1BusinessasUsual_5);
-        map.addLayer(layer_S1BusinessasUsual_5);
-        function pop_Subquadrantsgrid_6(feature, layer) {
+        map.createPane('pane_S3IncreasedFragmentation_2');
+        map.getPane('pane_S3IncreasedFragmentation_2').style.zIndex = 402;
+        var img_S3IncreasedFragmentation_2 = 'data/S3IncreasedFragmentation_2.png';
+        var img_bounds_S3IncreasedFragmentation_2 = [[-6.792581042548818,106.25559955967395],[-5.866767292095835,107.30527432851883]];
+        var layer_S3IncreasedFragmentation_2 = new L.imageOverlay(img_S3IncreasedFragmentation_2,
+                                              img_bounds_S3IncreasedFragmentation_2,
+                                              {pane: 'pane_S3IncreasedFragmentation_2'});
+        bounds_group.addLayer(layer_S3IncreasedFragmentation_2);
+        map.createPane('pane_S2SustainableDevelopment_3');
+        map.getPane('pane_S2SustainableDevelopment_3').style.zIndex = 403;
+        var img_S2SustainableDevelopment_3 = 'data/S2SustainableDevelopment_3.png';
+        var img_bounds_S2SustainableDevelopment_3 = [[-6.792581042548818,106.25559955967395],[-5.866767292095835,107.30527432851883]];
+        var layer_S2SustainableDevelopment_3 = new L.imageOverlay(img_S2SustainableDevelopment_3,
+                                              img_bounds_S2SustainableDevelopment_3,
+                                              {pane: 'pane_S2SustainableDevelopment_3'});
+        bounds_group.addLayer(layer_S2SustainableDevelopment_3);
+        map.createPane('pane_S1BusinessasUsual_4');
+        map.getPane('pane_S1BusinessasUsual_4').style.zIndex = 404;
+        var img_S1BusinessasUsual_4 = 'data/S1BusinessasUsual_4.png';
+        var img_bounds_S1BusinessasUsual_4 = [[-6.792581042548818,106.25559955967395],[-5.866767292095835,107.30527432851883]];
+        var layer_S1BusinessasUsual_4 = new L.imageOverlay(img_S1BusinessasUsual_4,
+                                              img_bounds_S1BusinessasUsual_4,
+                                              {pane: 'pane_S1BusinessasUsual_4'});
+        bounds_group.addLayer(layer_S1BusinessasUsual_4);
+        map.addLayer(layer_S1BusinessasUsual_4);
+        function pop_Subquadrantsgrid_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">subquad</th>\
@@ -220,9 +213,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Subquadrantsgrid_6_0() {
+        function style_Subquadrantsgrid_5_0() {
             return {
-                pane: 'pane_Subquadrantsgrid_6',
+                pane: 'pane_Subquadrantsgrid_5',
                 opacity: 1,
                 color: 'rgba(107,174,214,1.0)',
                 dashArray: '',
@@ -233,21 +226,21 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_Subquadrantsgrid_6');
-        map.getPane('pane_Subquadrantsgrid_6').style.zIndex = 406;
-        map.getPane('pane_Subquadrantsgrid_6').style['mix-blend-mode'] = 'normal';
-        var layer_Subquadrantsgrid_6 = new L.geoJson(json_Subquadrantsgrid_6, {
+        map.createPane('pane_Subquadrantsgrid_5');
+        map.getPane('pane_Subquadrantsgrid_5').style.zIndex = 405;
+        map.getPane('pane_Subquadrantsgrid_5').style['mix-blend-mode'] = 'normal';
+        var layer_Subquadrantsgrid_5 = new L.geoJson(json_Subquadrantsgrid_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_Subquadrantsgrid_6',
-            layerName: 'layer_Subquadrantsgrid_6',
-            pane: 'pane_Subquadrantsgrid_6',
-            onEachFeature: pop_Subquadrantsgrid_6,
-            style: style_Subquadrantsgrid_6_0,
+            dataVar: 'json_Subquadrantsgrid_5',
+            layerName: 'layer_Subquadrantsgrid_5',
+            pane: 'pane_Subquadrantsgrid_5',
+            onEachFeature: pop_Subquadrantsgrid_5,
+            style: style_Subquadrantsgrid_5_0,
         });
-        bounds_group.addLayer(layer_Subquadrantsgrid_6);
-        map.addLayer(layer_Subquadrantsgrid_6);
-        function pop_Quadrantsgrid_7(feature, layer) {
+        bounds_group.addLayer(layer_Subquadrantsgrid_5);
+        map.addLayer(layer_Subquadrantsgrid_5);
+        function pop_Quadrantsgrid_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['quadrant'] !== null ? autolinker.link(String(feature.properties['quadrant']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -260,9 +253,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_Quadrantsgrid_7_0() {
+        function style_Quadrantsgrid_6_0() {
             return {
-                pane: 'pane_Quadrantsgrid_7',
+                pane: 'pane_Quadrantsgrid_6',
                 opacity: 1,
                 color: 'rgba(107,136,214,1.0)',
                 dashArray: '',
@@ -273,21 +266,21 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_Quadrantsgrid_7');
-        map.getPane('pane_Quadrantsgrid_7').style.zIndex = 407;
-        map.getPane('pane_Quadrantsgrid_7').style['mix-blend-mode'] = 'normal';
-        var layer_Quadrantsgrid_7 = new L.geoJson(json_Quadrantsgrid_7, {
+        map.createPane('pane_Quadrantsgrid_6');
+        map.getPane('pane_Quadrantsgrid_6').style.zIndex = 406;
+        map.getPane('pane_Quadrantsgrid_6').style['mix-blend-mode'] = 'normal';
+        var layer_Quadrantsgrid_6 = new L.geoJson(json_Quadrantsgrid_6, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_Quadrantsgrid_7',
-            layerName: 'layer_Quadrantsgrid_7',
-            pane: 'pane_Quadrantsgrid_7',
-            onEachFeature: pop_Quadrantsgrid_7,
-            style: style_Quadrantsgrid_7_0,
+            dataVar: 'json_Quadrantsgrid_6',
+            layerName: 'layer_Quadrantsgrid_6',
+            pane: 'pane_Quadrantsgrid_6',
+            onEachFeature: pop_Quadrantsgrid_6,
+            style: style_Quadrantsgrid_6_0,
         });
-        bounds_group.addLayer(layer_Quadrantsgrid_7);
-        map.addLayer(layer_Quadrantsgrid_7);
-        function pop_MunicipalitiesinJABODETABEK_8(feature, layer) {
+        bounds_group.addLayer(layer_Quadrantsgrid_6);
+        map.addLayer(layer_Quadrantsgrid_6);
+        function pop_MunicipalitiesinJABODETABEK_7(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['OBJECTID'] !== null ? autolinker.link(String(feature.properties['OBJECTID']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -340,9 +333,9 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_MunicipalitiesinJABODETABEK_8_0() {
+        function style_MunicipalitiesinJABODETABEK_7_0() {
             return {
-                pane: 'pane_MunicipalitiesinJABODETABEK_8',
+                pane: 'pane_MunicipalitiesinJABODETABEK_7',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -353,30 +346,121 @@
                 interactive: false,
             }
         }
-        map.createPane('pane_MunicipalitiesinJABODETABEK_8');
-        map.getPane('pane_MunicipalitiesinJABODETABEK_8').style.zIndex = 408;
-        map.getPane('pane_MunicipalitiesinJABODETABEK_8').style['mix-blend-mode'] = 'normal';
-        var layer_MunicipalitiesinJABODETABEK_8 = new L.geoJson(json_MunicipalitiesinJABODETABEK_8, {
+        map.createPane('pane_MunicipalitiesinJABODETABEK_7');
+        map.getPane('pane_MunicipalitiesinJABODETABEK_7').style.zIndex = 407;
+        map.getPane('pane_MunicipalitiesinJABODETABEK_7').style['mix-blend-mode'] = 'normal';
+        var layer_MunicipalitiesinJABODETABEK_7 = new L.geoJson(json_MunicipalitiesinJABODETABEK_7, {
             attribution: '',
             interactive: false,
-            dataVar: 'json_MunicipalitiesinJABODETABEK_8',
-            layerName: 'layer_MunicipalitiesinJABODETABEK_8',
-            pane: 'pane_MunicipalitiesinJABODETABEK_8',
-            onEachFeature: pop_MunicipalitiesinJABODETABEK_8,
-            style: style_MunicipalitiesinJABODETABEK_8_0,
+            dataVar: 'json_MunicipalitiesinJABODETABEK_7',
+            layerName: 'layer_MunicipalitiesinJABODETABEK_7',
+            pane: 'pane_MunicipalitiesinJABODETABEK_7',
+            onEachFeature: pop_MunicipalitiesinJABODETABEK_7,
+            style: style_MunicipalitiesinJABODETABEK_7_0,
         });
-        bounds_group.addLayer(layer_MunicipalitiesinJABODETABEK_8);
-        map.addLayer(layer_MunicipalitiesinJABODETABEK_8);
+        bounds_group.addLayer(layer_MunicipalitiesinJABODETABEK_7);
+        map.addLayer(layer_MunicipalitiesinJABODETABEK_7);
+        function pop_RoadnetworkOSM_8(feature, layer) {
+            var popupContent = '<table>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['id'] !== null ? autolinker.link(String(feature.properties['id']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['name'] !== null ? autolinker.link(String(feature.properties['name']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['source'] !== null ? autolinker.link(String(feature.properties['source']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['highway'] !== null ? autolinker.link(String(feature.properties['highway']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['surface'] !== null ? autolinker.link(String(feature.properties['surface']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['lanes'] !== null ? autolinker.link(String(feature.properties['lanes']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['incline'] !== null ? autolinker.link(String(feature.properties['incline']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2">' + (feature.properties['major'] !== null ? autolinker.link(String(feature.properties['major']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                    </tr>\
+                </table>';
+            var content = removeEmptyRowsFromPopupContent(popupContent, feature);
+			layer.on('popupopen', function(e) {
+				addClassToPopupIfMedia(content, e.popup);
+			});
+			layer.bindPopup(content, { maxHeight: 400 });
+        }
+
+        function style_RoadnetworkOSM_8_0(feature) {
+            switch(String(feature.properties['major'])) {
+                default:
+                    return {
+                pane: 'pane_RoadnetworkOSM_8',
+                opacity: 1,
+                color: 'rgba(0,0,0,0.604)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case '1':
+                    return {
+                pane: 'pane_RoadnetworkOSM_8',
+                opacity: 1,
+                color: 'rgba(102,102,102,0.604)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 2.0,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+                case '0':
+                    return {
+                pane: 'pane_RoadnetworkOSM_8',
+                opacity: 1,
+                color: 'rgba(172,172,172,0.604)',
+                dashArray: '',
+                lineCap: 'square',
+                lineJoin: 'bevel',
+                weight: 1,
+                fillOpacity: 0,
+                interactive: false,
+            }
+                    break;
+            }
+        }
+        map.createPane('pane_RoadnetworkOSM_8');
+        map.getPane('pane_RoadnetworkOSM_8').style.zIndex = 408;
+        map.getPane('pane_RoadnetworkOSM_8').style['mix-blend-mode'] = 'multiply';
+        var layer_RoadnetworkOSM_8 = new L.geoJson(json_RoadnetworkOSM_8, {
+            attribution: '',
+            interactive: false,
+            dataVar: 'json_RoadnetworkOSM_8',
+            layerName: 'layer_RoadnetworkOSM_8',
+            pane: 'pane_RoadnetworkOSM_8',
+            onEachFeature: pop_RoadnetworkOSM_8,
+            style: style_RoadnetworkOSM_8_0,
+        });
+        bounds_group.addLayer(layer_RoadnetworkOSM_8);
+        map.addLayer(layer_RoadnetworkOSM_8);
         var overlaysTree = [
         {label: '<b>top</b>', collapsed: true, selectAllCheckbox: true, children: [
-            {label: '<img src="legend/MunicipalitiesinJABODETABEK_8.png" /> Municipalities in JABODETABEK', layer: layer_MunicipalitiesinJABODETABEK_8},
-            {label: '<img src="legend/Quadrantsgrid_7.png" /> Quadrants grid', layer: layer_Quadrantsgrid_7},
-            {label: '<img src="legend/Subquadrantsgrid_6.png" /> Subquadrants grid', layer: layer_Subquadrantsgrid_6},]},
-        {label: '<b>scenarios classified</b>',  selectAllCheckbox: true, children: [
-            {label: "S1 Business as Usual", layer: layer_S1BusinessasUsual_5},
-            {label: "S2 Sustainable Development", layer: layer_S2SustainableDevelopment_4},
-            {label: "S3 Increased Fragmentation", layer: layer_S3IncreasedFragmentation_3},]},
-            {label: "OpenFreeMap", layer: layer_OpenFreeMap_2, radioGroup: 'bm' },
+            {label: 'Road network (OSM)<br /><table><tr><td style="text-align: center;"><img src="legend/RoadnetworkOSM_8_0.png" /></td><td></td></tr><tr><td style="text-align: center;"><img src="legend/RoadnetworkOSM_8_11.png" /></td><td>1</td></tr><tr><td style="text-align: center;"><img src="legend/RoadnetworkOSM_8_02.png" /></td><td>0</td></tr></table>', layer: layer_RoadnetworkOSM_8},
+            {label: '<img src="legend/MunicipalitiesinJABODETABEK_7.png" /> Municipalities in JABODETABEK', layer: layer_MunicipalitiesinJABODETABEK_7},
+            {label: '<img src="legend/Quadrantsgrid_6.png" /> Quadrants grid', layer: layer_Quadrantsgrid_6},
+            {label: '<img src="legend/Subquadrantsgrid_5.png" /> Subquadrants grid', layer: layer_Subquadrantsgrid_5},]},
+        {label: '<b>Layers evaluiation part 3</b>',  selectAllCheckbox: true, children: [
+            {label: "S1 Business as Usual", layer: layer_S1BusinessasUsual_4},
+            {label: "S2 Sustainable Development", layer: layer_S2SustainableDevelopment_3},
+            {label: "S3 Increased Fragmentation", layer: layer_S3IncreasedFragmentation_2},]},
             {label: "ESRI Topo", layer: layer_ESRITopo_1, radioGroup: 'bm' },
             {label: "OpenStreetMap", layer: layer_OpenStreetMap_0, radioGroup: 'bm' },]
         var lay = L.control.layers.tree(null, overlaysTree,{
@@ -445,15 +529,15 @@
                 return this._bounds;
             }
         });
-        resetLabels([layer_Subquadrantsgrid_6,layer_Quadrantsgrid_7,layer_MunicipalitiesinJABODETABEK_8]);
+        resetLabels([layer_Subquadrantsgrid_5,layer_Quadrantsgrid_6,layer_MunicipalitiesinJABODETABEK_7]);
         map.on("zoomend", function(){
-            resetLabels([layer_Subquadrantsgrid_6,layer_Quadrantsgrid_7,layer_MunicipalitiesinJABODETABEK_8]);
+            resetLabels([layer_Subquadrantsgrid_5,layer_Quadrantsgrid_6,layer_MunicipalitiesinJABODETABEK_7]);
         });
         map.on("layeradd", function(){
-            resetLabels([layer_Subquadrantsgrid_6,layer_Quadrantsgrid_7,layer_MunicipalitiesinJABODETABEK_8]);
+            resetLabels([layer_Subquadrantsgrid_5,layer_Quadrantsgrid_6,layer_MunicipalitiesinJABODETABEK_7]);
         });
         map.on("layerremove", function(){
-            resetLabels([layer_Subquadrantsgrid_6,layer_Quadrantsgrid_7,layer_MunicipalitiesinJABODETABEK_8]);
+            resetLabels([layer_Subquadrantsgrid_5,layer_Quadrantsgrid_6,layer_MunicipalitiesinJABODETABEK_7]);
         });
         </script>        
     </body>
