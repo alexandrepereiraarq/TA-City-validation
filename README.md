@@ -7,7 +7,7 @@ Repo hosting the materials for the validation of the [TA City Model](https://git
 This repo provides access to the supporting material used in the validation process, including preview of results and webmaps.
 
 ## Usage
-Open the (validation webpage)[https://alexandrepereiraarq.github.io/TA-City-validation/] and follow the instructions.
+Open the [validation webpage](https://alexandrepereiraarq.github.io/TA-City-validation/) and follow the instructions.
 
 ## Support
 Reach out to our team: 
