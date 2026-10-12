@@ -13,17 +13,52 @@
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
-        html, body, #map {
+        html, body {
             width: 100%;
             height: 100%;
             padding: 0;
             margin: 0;
         }
+        body {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+        }
+        h2 {
+            margin: 0.5em 0.75em 0.25em;
+        }
+        .map-layout {
+            display: flex;
+            flex: 1;
+            gap: 10px;
+            align-items: stretch;
+            padding: 0 10px 10px;
+            box-sizing: border-box;
+            min-height: 0;
+        }
+        #map {
+            flex: 1 1 auto;
+            width: auto;
+            height: 100%;
+            min-height: 300px;
+        }
+        .map-key {
+            width: 260px;
+            max-width: 30vw;
+            height: auto;
+            object-fit: contain;
+            align-self: flex-start;
+            border: 1px solid #d0d0d0;
+            background: #fff;
+        }
         </style>
         <title>Jakarta TA-City Model evaluation</title>
     </head>
     <body>
-        <div id="map">
+        <h2>Jakarta TA-City Model evaluation webmap: Part 3</h2>
+        <div class="map-layout">
+            <div id="map"></div>
+            <img src="ABM_validation_map_key.png" alt="Validation map key" class="map-key">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script>
